@@ -1,0 +1,1 @@
+/Users/rwparris/.bash_profile
