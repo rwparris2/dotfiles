@@ -16,6 +16,9 @@ PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ### Aliases
 
+# idea <-> intellij
+alias intellij="idea"
+
 # Color LS
 colorflag="-G"
 alias ls="command ls ${colorflag}"
