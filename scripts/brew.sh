@@ -96,5 +96,20 @@ brew install vbindiff
 brew install zopfli
 brew install thefuck
 
+# install some extra git tools
+brew tap PotatoLabs/homebrew-git-redate
+brew install git-redate
+
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# node
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+# nvm fucks with these files, so reload them
+source ~/.bash_profile
+source ~/.bashrc
+
+# install node
+nvm install node
