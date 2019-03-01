@@ -1,13 +1,11 @@
 if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+  source ~/.bashrc
 fi
-
 
 ### BASH-COMPLETION
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
-
 
 ### ANDROID
 export ANDROID_HOME="$HOME/Android/Sdk"
