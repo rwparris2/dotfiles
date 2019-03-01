@@ -72,11 +72,22 @@ export BOLD
 export RESET
 
 # Git branch details
+function parse_git_status() {
+	ahead=`git rev-list @{u}..HEAD 2> /dev/null | wc -l | xargs expr`
+	behind=`git rev-list HEAD..@{u} 2> /dev/null | wc -l | xargs expr`
+	if [ $behind != 0 ]
+	then
+		echo "\~$behind\/$ahead";
+	elif [ $ahead != 0 ]
+	then
+		echo "\~$ahead"
+	fi
+}
 function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
+	[[ $(git status 2> /dev/null | tail -n1) != *"working tree clean"* ]] && echo "*"
 }
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_status)/"
 }
 
 # Change this symbol to something sweet.
@@ -88,3 +99,13 @@ export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 # Only show the current directory's name in the tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+# Explicitly define Java Home
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_172`
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/robertparris/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/robertparris/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/robertparris/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/robertparris/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
