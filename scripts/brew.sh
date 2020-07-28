@@ -10,28 +10,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install GNU core utilities (those that come with macOS are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
-# Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-brew install bash
-brew install bash-completion2
-
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
-fi;
-
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -39,11 +17,12 @@ brew install wget --with-iri
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install python3
 
+# just some shit i like
 brew install git
 brew install git-lfs
 brew install rename
@@ -54,6 +33,14 @@ brew install lolcat
 brew install cowsay
 brew install bat
 brew install tmux
+brew install ripgrep
+brew install zsh-completions
+brew install maven
+brew install tldr
+brew install node
+
+# install quick view plugins to make osx finder quick view / preview better
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 # install some extra git tools
 brew tap PotatoLabs/homebrew-git-redate
@@ -61,17 +48,3 @@ brew install git-redate
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-# node
-# install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
-# nvm fucks with these files, so reload them
-source ~/.bash_profile
-source ~/.bashrc
-
-# install node
-nvm install node
-
-# edicat for edi files
-pip3 install -U edicat
