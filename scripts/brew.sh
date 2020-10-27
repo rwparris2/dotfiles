@@ -65,8 +65,7 @@ brew install node
 # java
 brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
-brew cask install adoptopenjdk11
-brew cask install adoptopenjdk15
+brew cask install adoptopenjdk11 adoptopenjdk15
 brew install maven
 
 # install some extra git tools
@@ -96,10 +95,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo 'Installing Casks'
 
 # install quick view plugins to make osx finder quick view / preview better
-brew cask install qquicklookase qlvideo qlcolorcode qlimagesize qlmarkdown qlstephen webpquicklook quicklook-json
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo webpquicklook
 
 # osx keeps bitchin about the QLMarkdown preview thing
-xattr -rd ~/Library/QuickLook/QLMarkdown.qlgenerator
+xattr -r ~/Library/QuickLook
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 brew cask install discord
 brew cask install docker
