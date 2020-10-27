@@ -1,18 +1,11 @@
+[pull]
+	ff = only
 [core]
-	excludesfile = /Users/rwparris/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Users/rwparris/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[user]
-	email = rwparris2@gmail.com
-	name = Robert Parris
-[commit]
-	template = /Users/rwparris/.stCommitMsg
-[credential]
-	helper = cache --timeout=2628000
+	excludesfile = /Users/robertparris/.gitignore_global
 [alias]
     fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
     adog = log --all --decorate --oneline --graph
+[includeIf "gitdir:~/projects/personal/"]
+	path = ~/git-personal.conf
+[includeIf "gitdir:~/projects/tetria/"]
+	path = ~/git-tetria.conf
