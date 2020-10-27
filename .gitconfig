@@ -6,6 +6,6 @@
     fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
     adog = log --all --decorate --oneline --graph
 [includeIf "gitdir:~/projects/personal/"]
-	path = ~/git-personal.conf
+	path = ~/.git-personal.conf
 [includeIf "gitdir:~/projects/tetria/"]
-	path = ~/git-tetria.conf
+	path = ~/.git-tetria.conf
