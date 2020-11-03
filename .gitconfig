@@ -1,5 +1,11 @@
 [pull]
 	ff = only
+[pager]
+	# when pager is set to false, it will show its results under the command instead of in a separate app (called 'less')
+	# don't use less for `git branch` (less is default in Git > 2.16)
+	branch = false
+	# don't use less for `git tag` (less is default in Git > 2.16)
+	tag = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -15,6 +21,3 @@
 	path = ~/.gitconfig-personal.conf
 [includeIf "gitdir:~/projects/tetria/"]
 	path = ~/.gitconfig-tetria.conf
-[pager]
-	branch = false
-	tag = false
