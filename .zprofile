@@ -17,6 +17,10 @@ alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
 alias ..="cd .."
 alias ...="cd ../.."
 
+# Docker
+alias dps="docker ps   --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
+alias dpsa="docker psa --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
+
 # Java
 function useJdk8 {
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
