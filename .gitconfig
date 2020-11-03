@@ -15,3 +15,6 @@
 	path = ~/.gitconfig-personal.conf
 [includeIf "gitdir:~/projects/tetria/"]
 	path = ~/.gitconfig-tetria.conf
+[pager]
+	branch = false
+	tag = false
