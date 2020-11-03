@@ -6,4 +6,4 @@ cp .zshrc                       ~/.zshrc
 cp .zprofile                    ~/.zprofile
 cp .p10k.zsh                    ~/.p10k.zsh
 
-source ~/.zshrc
+source ~/.zprofile
