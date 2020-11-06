@@ -21,6 +21,9 @@ alias ...="cd ../.."
 alias dps="docker ps   --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
 alias dpsa="docker psa --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
 
+# Cwd
+alias cwd="pwd"
+
 # Java
 function useJdk8 {
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
