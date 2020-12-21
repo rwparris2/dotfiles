@@ -69,6 +69,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 nvm install node # install latest node
 
+# vuejs
+npm i -g @vue/cli
+
+# prettier keeps javascirpt code formatted in a pretty way https://prettier.io/
+npm i -g prettier
+# eslint is a static linter for javascript https://eslint.org/
+npm i -g eslint
+# simple static file server (good for testing e.g. a simple index.html) github.com/zeit/serve
+npm i -g serve
+
+
 # java
 brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
