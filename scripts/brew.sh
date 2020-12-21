@@ -60,7 +60,14 @@ brew install ssh-copy-id
 brew install fzf
 
 # nodejs
-brew install node
+# install node using nvm (node version manager)
+brew install nvm
+mkdir ~/.nvm
+# the following 3 lines need to be in .zsrch or .zprofile as well
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+nvm install node # install latest node
 
 # java
 brew tap adoptopenjdk/openjdk
