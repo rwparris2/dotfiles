@@ -118,4 +118,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# removes mvnd alias (from oh-my-zsh plugin) so that mvnd (github.com/mvndaemon/mvnd) can be called
+unalias mvnd
+
 source ~/.zprofile

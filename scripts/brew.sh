@@ -79,12 +79,16 @@ npm i -g eslint
 # simple static file server (good for testing e.g. a simple index.html) github.com/zeit/serve
 npm i -g serve
 
-
 # java
 brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
 brew cask install adoptopenjdk11 adoptopenjdk15
 brew install maven
+
+# mvnd faster maven builds https://github.com/mvndaemon/mvnd
+# Users that use oh-my-zsh often use completion for maven. The default maven completion plugin defines mvnd as an alias to mvn deploy. So before being able to use mvnd, you need to unalias using the following command: `unalias mvnd` 
+brew install --HEAD mvndaemon/mvnd/mvnd
+
 
 # install some extra git tools
 brew tap PotatoLabs/homebrew-git-redate
