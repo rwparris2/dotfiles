@@ -19,7 +19,7 @@ alias ...="cd ../.."
 
 # Docker
 alias dps="docker ps   --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
-alias dpsa="docker psa --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
+alias dpsa="docker ps -a --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
 
 # Cwd
 alias cwd="pwd"
