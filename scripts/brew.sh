@@ -90,7 +90,6 @@ brew install maven
 # Users that use oh-my-zsh often use completion for maven. The default maven completion plugin defines mvnd as an alias to mvn deploy. So before being able to use mvnd, you need to unalias using the following command: `unalias mvnd` 
 brew install --HEAD mvndaemon/mvnd/mvnd
 
-
 # install some extra git tools
 brew tap PotatoLabs/homebrew-git-redate
 brew install git-redate
@@ -124,6 +123,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize su
 xattr -r ~/Library/QuickLook
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
+# common apps
 brew cask install discord
 brew cask install docker
 brew cask install flux
