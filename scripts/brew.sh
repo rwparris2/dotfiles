@@ -7,7 +7,6 @@
 ###################
 
 # Install Homebrew
-echo 'Installing Homebrew'
 if test ! "$( command -v brew )"; then
     echo "Installing homebrew"
     ruby -e "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )"
@@ -35,9 +34,6 @@ brew tap homebrew/cask-versions
 # Installing packages
 echo 'Installing packages'
 
-# Install `wget` with IRI support.
-brew install wget --enable-iri
-
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
@@ -45,6 +41,7 @@ brew install gnupg
 brew install coreutils
 
 # Install more recent versions of some macOS tools.
+brew install wget
 brew install vim
 brew install grep
 brew install openssh
@@ -94,15 +91,15 @@ nvm install node # install latest node
 nvm install --lts # install lts node
 
 # vuejs
-npm i -g @vue/cli
-npm i -g vite
+npm i -g @vue/cli --prefer-offline --no-audit
+npm i -g vite --prefer-offline --no-audit
 
 # prettier keeps javascirpt code formatted in a pretty way https://prettier.io/
-npm i -g prettier
+npm i -g prettier --prefer-offline --no-audit
 # eslint is a static linter for javascript https://eslint.org/
-npm i -g eslint
+npm i -g eslint --prefer-offline --no-audit
 # simple static file server (good for testing e.g. a simple index.html) github.com/zeit/serve
-npm i -g serve
+npm i -g serve --prefer-offline --no-audit
 
 ##################
 # Java & Friends #
@@ -111,15 +108,17 @@ npm i -g serve
 echo 'Installing Java & friends'
 # java
 brew tap adoptopenjdk/openjdk
-brew cask install adoptopenjdk8
-brew cask install adoptopenjdk11 adoptopenjdk15
+brew install --cask adoptopenjdk8
+brew install --cask adoptopenjdk11 
+brew install --cask adoptopenjdk15
 brew install maven
+brew install gradle
 # java application profiler
-brew cask install jprofiler
+brew install --cask jprofiler
 
 # mvnd faster maven builds https://github.com/mvndaemon/mvnd
 # Users that use oh-my-zsh often use completion for maven. The default maven completion plugin defines mvnd as an alias to mvn deploy. So before being able to use mvnd, you need to unalias using the following command: `unalias mvnd` 
-brew install --HEAD mvndaemon/mvnd/mvnd
+brew install mvndaemon/mvnd/mvnd
 
 ######################
 # Configure Terminal #
@@ -143,34 +142,34 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo 'Installing Casks'
 
 # install quick view plugins to make osx finder quick view / preview better
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo webpquicklook
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo webpquicklook
 
 # osx keeps bitchin about the QLMarkdown preview thing
 xattr -r ~/Library/QuickLook
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 # common apps
-brew cask install discord
-brew cask install docker
-brew cask install flux
-brew cask install postman
-brew cask install sourcetree
-brew cask install spotify
-brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install dropbox
-brew cask install rescuetime
-brew cask install firefox-developer-edition
+brew install --cask discord
+brew install --cask docker
+brew install --cask flux
+brew install --cask postman
+brew install --cask sourcetree
+brew install --cask spotify
+brew install --cask sublime-text
+brew install --cask visual-studio-code
+brew install --cask vlc
+brew install --cask dropbox
+brew install --cask rescuetime
+brew install --cask firefox-developer-edition
 
 # prevent osx from locking or going to sleep
-brew cask install caffeine
+brew install --cask caffeine
 
 # torrents
-brew cask install transmission
+brew install --cask transmission
 
 # window management app https://github.com/rxhanson/Rectangle
-brew cask install rectangle
+brew install --cask rectangle
 
 # Remove outdated versions from the cellar.
 echo 'Brew cleanup'
