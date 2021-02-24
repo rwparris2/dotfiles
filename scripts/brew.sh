@@ -74,6 +74,10 @@ brew install ripgrep
 brew tap PotatoLabs/homebrew-git-redate
 brew install git-redate
 
+# libpq brings tools such as psql and pg_dump without having the full postgres installed
+brew install libpq
+brew link --force libpq
+
 ##################
 # Node & Friends #
 ##################
