@@ -115,6 +115,7 @@ brew tap adoptopenjdk/openjdk
 brew install --cask adoptopenjdk8
 brew install --cask adoptopenjdk11 
 brew install --cask adoptopenjdk15
+brew install --cask adoptopenjdk16
 brew install maven
 brew install gradle
 # java application profiler

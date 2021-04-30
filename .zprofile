@@ -34,7 +34,10 @@ function useJdk11 {
 function useJdk15 {
   export JAVA_HOME=`/usr/libexec/java_home -v 15`
 }
-useJdk15
+function useJdk16 {
+  export JAVA_HOME=`/usr/libexec/java_home -v 16`
+}
+useJdk16
 
 # Node
 export NVM_DIR="$HOME/.nvm"
