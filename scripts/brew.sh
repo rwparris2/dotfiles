@@ -16,16 +16,12 @@ fi
 echo 'Updating Homebrew'
 brew update
 
+# taps
+brew tap homebrew/cask-versions
+
 # Upgrade any already-installed formulae.
 echo 'Upgrading any already-installed formulae'
 brew upgrade
-brew upgrade --cask
-
-# add some default taps
-echo 'Adding taps'
-brew tap homebrew/bundle
-brew tap homebrew/cask
-brew tap homebrew/cask-versions
 
 #########################
 # Generic brew packages #
@@ -98,7 +94,7 @@ nvm install --lts # install lts node
 npm i -g @vue/cli --prefer-offline --no-audit
 npm i -g vite --prefer-offline --no-audit
 
-# prettier keeps javascirpt code formatted in a pretty way https://prettier.io/
+# prettier keeps javascript code formatted in a pretty way https://prettier.io/
 npm i -g prettier --prefer-offline --no-audit
 # eslint is a static linter for javascript https://eslint.org/
 npm i -g eslint --prefer-offline --no-audit
@@ -155,6 +151,7 @@ xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 # common apps
 brew install --cask discord
+brew install --cask slack
 brew install --cask docker
 brew install --cask flux
 brew install --cask postman
@@ -166,6 +163,9 @@ brew install --cask vlc
 brew install --cask dropbox
 brew install --cask rescuetime
 brew install --cask firefox-developer-edition
+brew install --cask choosy
+brew install --cask webex
+brew install --cask steam
 
 # prevent osx from locking or going to sleep
 brew install --cask caffeine
