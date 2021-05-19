@@ -142,13 +142,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 echo 'Installing Casks'
 
-# install quick view plugins to make osx finder quick view / preview better
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo webpquicklook
-
-# osx keeps bitchin about the QLMarkdown preview thing
-xattr -r ~/Library/QuickLook
-xattr -d -r com.apple.quarantine ~/Library/QuickLook
-
 # common apps
 brew install --cask discord
 brew install --cask slack
