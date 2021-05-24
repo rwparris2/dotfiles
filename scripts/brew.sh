@@ -146,7 +146,6 @@ echo 'Installing Casks'
 brew install --cask discord
 brew install --cask slack
 brew install --cask docker
-brew install --cask flux
 brew install --cask postman
 brew install --cask sourcetree
 brew install --cask spotify
