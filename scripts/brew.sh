@@ -158,6 +158,7 @@ brew install --cask firefox-developer-edition
 brew install --cask choosy
 brew install --cask webex
 brew install --cask steam
+brew install --cask microsoft-office
 
 # prevent osx from locking or going to sleep
 brew install --cask caffeine
