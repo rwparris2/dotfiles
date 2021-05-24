@@ -125,7 +125,7 @@ brew install mvndaemon/mvnd/mvnd
 # Configure Terminal #
 ######################
 
-# ZSH  
+# ZSH 
 echo 'Install ZSH'
 brew install zsh
 # install Oh-My-Zsh
@@ -146,19 +146,25 @@ echo 'Installing Casks'
 brew install --cask discord
 brew install --cask slack
 brew install --cask docker
-brew install --cask postman
 brew install --cask sourcetree
 brew install --cask spotify
 brew install --cask sublime-text
 brew install --cask visual-studio-code
 brew install --cask vlc
 brew install --cask dropbox
-brew install --cask rescuetime
 brew install --cask firefox-developer-edition
-brew install --cask choosy
 brew install --cask webex
 brew install --cask steam
 brew install --cask microsoft-office
+
+# time tracking app https://www.rescuetime.com/
+brew install --cask rescuetime
+
+# postman alternative https://github.com/warmuuh/milkman
+brew install --cask milkman
+
+# launch different browsers/profiles based on rules https://www.choosyosx.com/
+brew install --cask choosy
 
 # prevent osx from locking or going to sleep
 brew install --cask caffeine
