@@ -13,10 +13,13 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	excludesfile = /Users/robertparris/.gitignore_global
+	excludesfile = /Users/rwparris2/.gitignore_global
 [alias]
     fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
     adog = log --all --decorate --oneline --graph
+[user]
+	name = 
+	email = 
 [includeIf "gitdir:~/projects/personal/"]
 	path = ~/.gitconfig-personal.conf
 [includeIf "gitdir:~/projects/tetria/"]
