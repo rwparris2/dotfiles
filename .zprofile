@@ -21,6 +21,7 @@ alias ...="cd ../.."
 alias dps="docker  ps    --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
 alias dpsa="docker ps -a --format '{{ .Names }}\t{{ .Image }}\t{{ .Ports }}\t{{ .Status}}'"
 alias ddownup="docker compose down --remove-orphans && docker compose up -d"
+alias ddown="docker compose down --remove-orphans"
 
 # Cwd
 alias cwd="pwd"
