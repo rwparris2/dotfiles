@@ -47,10 +47,8 @@ brew install git-lfs
 brew install curl
 
 # just some shit i like
-brew install tree
-brew install thefuck
-brew install lolcat
-brew install cowsay
+
+# abbreviated man command
 brew install tldr
 
 # copy ssh keys to servers
@@ -73,6 +71,15 @@ brew install git-redate
 # libpq brings tools such as psql and pg_dump without having the full postgres installed
 brew install libpq
 brew link --force libpq
+
+# show a list of files in tree view, http://mama.indstate.edu/users/ice/tree/
+brew install tree
+# corrects previous errors in console commands https://github.com/nvbn/thefuck
+brew install thefuck
+# rainbows https://github.com/busyloop/lolcat
+brew install lolcat
+# puts words in a cows mouth
+brew install cowsay
 
 ##################
 # Node & Friends #
